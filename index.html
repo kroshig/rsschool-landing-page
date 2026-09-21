@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="ru" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fjord Brew — Скандинавская обжарка</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23244238'><path d='M2 21h18v-2H2v2zM20 8h-2V5h2v3zm0-5H4v10a4 4 0 004 4h6a4 4 0 004-4v-3h2a2 2 0 002-2V5a2 2 0 00-2-2z'/></svg>"
+      type="image/svg+xml"
+    />  
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__container">
+        <a href="index.html" class="logo" aria-label="Fjord Brew главная">
+          <span class="logo__mark">◇</span> FJORD BREW
+        </a>
+
+        <nav class="nav" aria-label="Основная навигация">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="index.html#hero" class="nav__link active">Главная</a>
+            </li>
+            <li class="nav__item">
+              <a href="index.html#featured" class="nav__link">Сезонный кофе</a>
+            </li>
+            <li class="nav__item">
+              <a href="index.html#philosophy" class="nav__link">Философия</a>
+            </li>
+            <li class="nav__item">
+              <a href="index.html#ritual" class="nav__link">Ритуал</a>
+            </li>
+            <li class="nav__item">
+              <a href="menu.html" class="nav__link">Каталог зерна</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header__actions">
+          <button
+            class="theme-toggle"
+            id="theme-toggle"
+            type="button"
+            aria-label="Переключить тему"
+            title="Сменить тему"
+          >
+            <span
+              class="theme-toggle__icon theme-toggle__icon--light"
+              aria-hidden="true"
+              >☀</span
+            >
+            <span
+              class="theme-toggle__icon theme-toggle__icon--dark"
+              aria-hidden="true"
+              >☾</span
+            >
+          </button>
+
+          <button
+            class="burger-btn"
+            type="button"
+            aria-label="Открыть мобильное меню"
+            aria-expanded="false"
+          >
+            <span class="burger-btn__bar"></span>
+            <span class="burger-btn__bar"></span>
+            <span class="burger-btn__bar"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="hero">
+        <div class="container hero__container">
+          <div class="hero__content">
+            <span class="badge">Specialty Roastery • Oslo Edition</span>
+            <h1 class="hero__title">Чистый вкус северной обжарки.</h1>
+            <p class="hero__subtitle">
+              Раскрываем цветочную кислотность, ягоды и натуральную сладость
+              зёрен. Никакой горечи — только прозрачный терруар.
+            </p>
+            <div class="hero__actions">
+              <a href="menu.html" class="btn btn--primary">Выбрать кофе</a>
+              <a href="#featured" class="btn btn--secondary"
+                >Попробовать сезонное</a
+              >
+            </div>
+          </div>
+          <div class="hero__visual">
+            <div class="hero__card-preview">
+              <div class="hero__card-tag">Nordic Style • 100% Arabica</div>
+              <div class="hero__card-media">
+                <img
+                  src="assets/hero-card.jpg"
+                  alt="Свежезаваренный фильтр-кофе светлой обжарки в стеклянном сервере"
+                  class="hero__card-img"
+                />
+              </div>
+              <p class="hero__card-label">
+                Ethical Direct Trade from Yirgacheffe &amp; Nyeri
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="slider-section" id="featured">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="badge">Сезонный урожай</span>
+              <h2 class="section-title">Избранные микролоты</h2>
+            </div>
+            <div class="slider-controls">
+              <button
+                class="slider-btn slider-btn--prev"
+                type="button"
+                aria-label="Предыдущий слайд"
+              >
+                ←
+              </button>
+              <button
+                class="slider-btn slider-btn--next"
+                type="button"
+                aria-label="Следующий слайд"
+              >
+                →
+              </button>
+            </div>
+          </div>
+
+          <div class="slider-wrapper">
+            <div class="slider-track">
+              <article class="slide-card">
+                <div class="slide-card__img-box">
+                  <span class="slide-card__origin">Эфиопия</span>
+                  <img
+                    src="assets/slide1.jpg"
+                    alt="Крафтовая упаковка зёрен светлой обжарки Ethiopia Idido"
+                    class="slide-card__img"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="slide-card__content">
+                  <span class="slide-card__notes"
+                    >Жасмин • Бергамот • Персик</span
+                  >
+                  <h3 class="slide-card__title">Ethiopia Idido Anaerobic</h3>
+                  <p class="slide-card__desc">
+                    Светлая обжарка под фильтр. Искристая цитрусовая кислотность
+                    с долгим чайным послевкусием.
+                  </p>
+                  <div class="slide-card__bottom">
+                    <span class="slide-card__price">14$ / 250г</span>
+                    <a href="menu.html" class="card-link">В каталог →</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="slide-card">
+                <div class="slide-card__img-box">
+                  <span class="slide-card__origin">Кения</span>
+                  <img
+                    src="assets/slide2.jpg"
+                    alt="Процесс пролива кенийского кофе через воронку V60"
+                    class="slide-card__img"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="slide-card__content">
+                  <span class="slide-card__notes"
+                    >Красная смородина • Ревень • Тростник</span
+                  >
+                  <h3 class="slide-card__title">Kenya Kirinyaga SL28</h3>
+                  <p class="slide-card__desc">
+                    Яркий, сочный и плотный профиль с комплексной винной
+                    кислотностью мытой обработки.
+                  </p>
+                  <div class="slide-card__bottom">
+                    <span class="slide-card__price">16$ / 250г</span>
+                    <a href="menu.html" class="card-link">В каталог →</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="slide-card">
+                <div class="slide-card__img-box">
+                  <span class="slide-card__origin">Колумбия</span>
+                  <img
+                    src="assets/slide3.jpg"
+                    alt="Чашка фильтр-кофе Колумбия Гейша на столе обжарщика"
+                    class="slide-card__img"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="slide-card__content">
+                  <span class="slide-card__notes"
+                    >Лемонграсс • Папайя • Белый мед</span
+                  >
+                  <h3 class="slide-card__title">Colombia Finca El Paraiso</h3>
+                  <p class="slide-card__desc">
+                    Ферментация с контролем температуры. Невероятный тропический
+                    букет и шелковистое тело.
+                  </p>
+                  <div class="slide-card__bottom">
+                    <span class="slide-card__price">20$ / 250г</span>
+                    <a href="menu.html" class="card-link">В каталог →</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+
+          <div class="slider-dots" aria-label="Индикаторы слайдера">
+            <span class="slider-dot active"></span>
+            <span class="slider-dot"></span>
+            <span class="slider-dot"></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="philosophy" id="philosophy">
+        <div class="container">
+          <div class="philosophy__grid">
+            <div class="philosophy__text">
+              <span class="badge">Скандинавский метод</span>
+              <h2 class="section-title">
+                Мы не сжигаем сахар. Мы сохраняем происхождение.
+              </h2>
+              <p class="text-lead">
+                Классическая тёмная обжарка скрывает дефекты зерна за вкусом
+                дыма и угля. Наш подход противоположен: мы закупаем ягоды рангом
+                выше 86+ SCA и обжариваем их деликатно.
+              </p>
+              <div class="features-list">
+                <div class="feature-item">
+                  <h3 class="feature-item__title">
+                    Светлый профиль (Light Cinnamon)
+                  </h3>
+                  <p class="feature-item__desc">
+                    Сохраняет природные фруктовые сахара и антиоксиданты без
+                    едкой горечи.
+                  </p>
+                </div>
+                <div class="feature-item">
+                  <h3 class="feature-item__title">
+                    100% Прямой импорт (Direct Trade)
+                  </h3>
+                  <p class="feature-item__desc">
+                    Работаем с семейными фермами без биржевых посредников с
+                    честной оплатой труда.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="philosophy__box">
+              <div class="stat-card">
+                <span class="stat-card__number">87.5+</span>
+                <span class="stat-card__label"
+                  >Средний SCA-скор в текущей линейке лотов</span
+                >
+              </div>
+              <div class="stat-card">
+                <span class="stat-card__number">14 дней</span>
+                <span class="stat-card__label"
+                  >Максимальный срок зерна после ростера до отправки</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="ritual" id="ritual">
+        <div class="container">
+          <div class="section-head text-center">
+            <span class="badge">Brewing Guide</span>
+            <h2 class="section-title">Приготовление в V60 и воронках</h2>
+            <p class="section-subtitle">
+              Простые пропорции, чтобы дома получить чашку ресторанного уровня.
+            </p>
+          </div>
+          <div class="ritual__steps">
+            <div class="step-card">
+              <span class="step-card__num">01</span>
+              <h3 class="step-card__title">Вода и помол</h3>
+              <p class="step-card__desc">
+                16г кофе среднего помола (как морская соль). Вода минерализации
+                60–80 ppm, 93°C.
+              </p>
+            </div>
+            <div class="step-card">
+              <span class="step-card__num">02</span>
+              <h3 class="step-card__title">Блум (Предсмачивание)</h3>
+              <p class="step-card__desc">
+                Залейте 50г воды за 10 секунд и подождите 40 секунд, чтобы кофе
+                избавился от углекислого газа.
+              </p>
+            </div>
+            <div class="step-card">
+              <span class="step-card__num">03</span>
+              <h3 class="step-card__title">Проливы и завершение</h3>
+              <p class="step-card__desc">
+                Долейте воду двумя равными интервалами до 250г. Общее время
+                экстракции: 2:40–3:00 минуты.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="footer__col footer__brand">
+          <a href="index.html" class="logo logo--footer">
+            <span class="logo__mark">◇</span> FJORD BREW
+          </a>
+          <p class="footer__text">
+            Манифест чистого зерна. Обжариваем и доставляем свежий спешелти кофе
+            по всей стране.
+          </p>
+          <span class="footer__copy"
+            >© 2026 Fjord Brew. Учебный проект.</span
+          >
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__heading">Контакты</h4>
+          <ul class="footer__links">
+            <li>
+              <a href="tel:5553535" class="footer__link"
+                > 555-35-35</a
+              >
+            </li>
+            <li>
+              <a href="mailto:order@fjordbrew.coffee" class="footer__link"
+                >order@fjordbrew.coffee</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://maps.google.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="footer__link"
+              >
+                Агинст, 24 ↗
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__heading">Мы в сетях</h4>
+          <ul class="footer__links">
+            <li>
+              <a
+                href="https://t.me"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="footer__link"
+                >Telegram Channel ↗</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="footer__link"
+                >Instagram Showcase ↗</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="footer__link"
+                >GitHub Репозиторий ↗</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__col footer__rss">
+          <h4 class="footer__heading">RS School</h4>
+          <p class="footer__text">Курс JavaScript / Front-end Stage 1</p>
+          <a
+            href="https://rs.school/courses/javascript-ru"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="rss-badge"
+            aria-label="RS School JS Course"
+          >
+            <span class="rss-badge__tag">RS School</span> Course 2026
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
