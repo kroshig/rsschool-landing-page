@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог спешелти кофе — Fjord Brew </title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23244238'><path d='M2 21h18v-2H2v2zM20 8h-2V5h2v3zm0-5H4v10a4 4 0 004 4h6a4 4 0 004-4v-3h2a2 2 0 002-2V5a2 2 0 00-2-2z'/></svg>" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ 
+  <header class="header">
+    <div class="container header__container">
+      <a href="index.html" class="logo" aria-label="Fjord Brew главная">
+        <span class="logo__mark">◇</span> FJORD BREW
+      </a>
+
+      <nav class="nav" aria-label="Основная навигация">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="index.html#hero" class="nav__link">Главная</a></li>
+          <li class="nav__item"><a href="index.html#featured" class="nav__link">Сезонный кофе</a></li>
+          <li class="nav__item"><a href="index.html#philosophy" class="nav__link">Философия</a></li>
+          <li class="nav__item"><a href="index.html#ritual" class="nav__link">Ритуал</a></li>
+          <li class="nav__item"><a href="catalog.html" class="nav__link active">Каталог зерна</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Переключить тему" title="Сменить тему">
+          <span class="theme-toggle__icon theme-toggle__icon--light" aria-hidden="true">☀</span>
+          <span class="theme-toggle__icon theme-toggle__icon--dark" aria-hidden="true">☾</span>
+        </button>
+
+        <button class="burger-btn" type="button" aria-label="Открыть мобильное меню" aria-expanded="false">
+          <span class="burger-btn__bar"></span>
+          <span class="burger-btn__bar"></span>
+          <span class="burger-btn__bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="catalog-page">
+    <div class="container">
+      
+      <header class="catalog-header">
+        <span class="badge">Магазин обжарщика</span>
+        <h1 class="catalog-title">Коллекция свежего зерна</h1>
+        <p class="catalog-desc">Вся линейка обжаривается дважды в неделю партиями до 15 кг на ростере Giesen.</p>
+      </header>
+
+      
+      <div class="catalog-tabs" role="tablist" aria-label="Категории продуктов">
+        <button class="tab-btn active" role="tab" aria-selected="true" type="button">Фильтр &amp; Воронка (8)</button>
+        <button class="tab-btn" role="tab" aria-selected="false" type="button">Эспрессо профиль (4)</button>
+        <button class="tab-btn" role="tab" aria-selected="false" type="button">Дрип-пакеты &amp; Аксессуары (6)</button>
+      </div>
+
+      <section class="catalog-grid" aria-label="Список кофе">
+        <article class="product-card">
+          <div class="product-card__thumb">
+            <span class="product-card__tag">Мытая</span>
+            <img 
+              src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=600&q=80" 
+              alt="Упаковка кофе зернового Ethiopia Yirgacheffe Grade 1" 
+              class="product-card__img"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-card__body">
+            <span class="product-card__sub">Эфиопия • 250г</span>
+            <h2 class="product-card__title">Ethiopia Yirgacheffe Grade 1</h2>
+            <p class="product-card__desc">Лимонная вербена, спелый белый персик и нежный жасмин в сладком послевкусии.</p>
+            <div class="product-card__footer">
+              <span class="product-card__price">14$</span>
+              <button class="btn btn--outline" type="button">В корзину</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-card__thumb">
+            <span class="product-card__tag">Натуральная</span>
+            <img 
+              src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80" 
+              alt="Свежеобжаренные зёрна Kenya Nyeri Peaberry" 
+              class="product-card__img"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-card__body">
+            <span class="product-card__sub">Кения • 250г</span>
+            <h2 class="product-card__title">Kenya Nyeri Peaberry</h2>
+            <p class="product-card__desc">Сок черной смородины, ежевика, цедра грейпфрута. Плотная структура напитка.</p>
+            <div class="product-card__footer">
+              <span class="product-card__price">15$</span>
+              <button class="btn btn--outline" type="button">В корзину</button>
+            </div>
+          </div>
+        </article>
+
+       
+        <article class="product-card">
+          <div class="product-card__thumb">
+            <span class="product-card__tag">Анаэробная</span>
+            <img 
+              src="https://images.unsplash.com/photo-1518832553480-cd0e625ed3e6?auto=format&fit=crop&w=600&q=80" 
+              alt="Микролот спешелти кофе Colombia Geisha Honey" 
+              class="product-card__img"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-card__body">
+            <span class="product-card__sub">Колумбия • 250г</span>
+            <h2 class="product-card__title">Colombia Geisha Honey</h2>
+            <p class="product-card__desc">Клубничное суфле, мелисса, розовый перец. Эксклюзивный чемпионский лот.</p>
+            <div class="product-card__footer">
+              <span class="product-card__price">21$</span>
+              <button class="btn btn--outline" type="button">В корзину</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-card__thumb">
+            <span class="product-card__tag">Мытая</span>
+            <img 
+              src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?auto=format&fit=crop&w=600&q=80" 
+              alt="Чашка фильтр-кофе Rwanda Nyamasheke Red" 
+              class="product-card__img"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-card__body">
+            <span class="product-card__sub">Руанда • 250г</span>
+            <h2 class="product-card__title">Rwanda Nyamasheke Red</h2>
+            <p class="product-card__desc">Чёрный чай с сухофруктами, сушеное яблоко, карамель и чистый цитрусовый финиш.</p>
+            <div class="product-card__footer">
+              <span class="product-card__price">12$</span>
+              <button class="btn btn--outline" type="button">В корзину</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-card__thumb">
+            <span class="product-card__tag">Вайлд</span>
+            <img 
+              src="https://images.unsplash.com/photo-1521302080334-4bebac2763a6?auto=format&fit=crop&w=600&q=80" 
+              alt="Упаковка кофе Costa Rica Tarrazu Anaerobic" 
+              class="product-card__img"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-card__body">
+            <span class="product-card__sub">Коста-Рика • 250г</span>
+            <h2 class="product-card__title">Costa Rica Tarrazú Anaerobic</h2>
+            <p class="product-card__desc">Спелая корица, темная слива, сладкое красное яблоко и сиропистое тело чашки.</p>
+            <div class="product-card__footer">
+              <span class="product-card__price">14$</span>
+              <button class="btn btn--outline" type="button">В корзину</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-card__thumb">
+            <span class="product-card__tag">Мытая</span>
+            <img 
+              src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=600&q=80" 
+              alt="Чашка утреннего кофе Guatemala Huehuetenango" 
+              class="product-card__img"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-card__body">
+            <span class="product-card__sub">Гватемала • 250г</span>
+            <h2 class="product-card__title">Guatemala Huehuetenango</h2>
+            <p class="product-card__desc">Молочный шоколад, спелый абрикос и миндаль. Сбалансированный ежедневный фильтр.</p>
+            <div class="product-card__footer">
+              <span class="product-card__price">13$</span>
+              <button class="btn btn--outline" type="button">В корзину</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-card__thumb">
+            <span class="product-card__tag">Натуральная</span>
+            <img 
+              src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=600&q=80" 
+              alt="Экстракция кофе Burundi Kayanza Yeast F1" 
+              class="product-card__img"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-card__body">
+            <span class="product-card__sub">Бурунди • 250г</span>
+            <h2 class="product-card__title">Burundi Kayanza Yeast F1</h2>
+            <p class="product-card__desc">Инжир, малина, темный виноград и пряности. Ферментация с винными дрожжами.</p>
+            <div class="product-card__footer">
+              <span class="product-card__price">16$</span>
+              <button class="btn btn--outline" type="button">В корзину</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card">
+          <div class="product-card__thumb">
+            <span class="product-card__tag">Бленд</span>
+            <img 
+              src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=600&q=80" 
+              alt="Фирменный скандинавский бленд Fjord Brew Signature Filter" 
+              class="product-card__img"
+              loading="lazy"
+            >
+          </div>
+          <div class="product-card__body">
+            <span class="product-card__sub">Бленд • 250г</span>
+            <h2 class="product-card__title">Fjord Brew Signature Filter</h2>
+            <p class="product-card__desc">50% мытая Эфиопия + 50% мытая Кения. Идеальный баланс цитрусов и ягодного джема.</p>
+            <div class="product-card__footer">
+              <span class="product-card__price">12$</span>
+              <button class="btn btn--outline" type="button">В корзину</button>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <div class="catalog-more">
+        <button class="btn btn--secondary btn--large" id="load-more-btn" type="button">
+          Показать ещё лоты (4)
+        </button>
+      </div>
+    </div>
+  </main>
+
+
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__col footer__brand">
+        <a href="index.html" class="logo logo--footer">
+          <span class="logo__mark">◇</span> FJORD BREW
+        </a>
+        <p class="footer__text">
+          Манифест чистого зерна. Обжариваем и доставляем свежий спешелти кофе по всей стране.
+        </p>
+        <span class="footer__copy">© 2026 Fjord Brew Roasters. Учебный проект.</span>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading">Контакты</h4>
+        <ul class="footer__links">
+          <li><a href="tel:+78005553535" class="footer__link">555-35-35</a></li>
+          <li><a href="mailto:order@fjordbrew.coffee" class="footer__link">order@fjordbrew.coffee</a></li>
+          <li>
+            <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="footer__link">
+              Агинст, 24 ↗
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__col">
+        <h4 class="footer__heading">Мы в сетях</h4>
+        <ul class="footer__links">
+          <li><a href="https://t.me" target="_blank" rel="noopener noreferrer" class="footer__link">Telegram Channel ↗</a></li>
+          <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="footer__link">Instagram Showcase ↗</a></li>
+          <li><a href="https://github.com" target="_blank" rel="noopener noreferrer" class="footer__link">GitHub Репозиторий ↗</a></li>
+        </ul>
+      </div>
+
+      <div class="footer__col footer__rss">
+        <h4 class="footer__heading">RS School</h4>
+        <p class="footer__text">Курс JavaScript / Front-end Stage 1</p>
+        <a href="https://rs.school/courses/javascript-ru" target="_blank" rel="noopener noreferrer" class="rss-badge" aria-label="RS School JS Course">
+          <span class="rss-badge__tag">RS School</span> Course 2026
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
