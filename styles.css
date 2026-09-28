@@ -56,7 +56,7 @@ body {
 
 body.scroll-locked {
   overflow: hidden;
-  height: 100vh;
+ 
 }
 
 main {
