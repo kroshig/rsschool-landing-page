@@ -1,126 +1,227 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru" data-theme="light">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Каталог спешелти кофе — FJORD BREW</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%238c5332'><path d='M2 21h18v-2H2v2zM20 8h-2V5h2v3zm0-5H4v10a4 4 0 004 4h6a4 4 0 004-4v-3h2a2 2 0 002-2V5a2 2 0 00-2-2z'/></svg>" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header class="header">
-    <div class="container header__container">
-      <a href="index.html" class="logo" aria-label="Fjord Brew главная">
-        <span class="logo__mark">◇</span> FJORD BREW
-      </a>
-
-      <nav class="nav" id="main-nav" aria-label="Основная навигация">
-        <ul class="nav__list">
-          <li class="nav__item"><a href="index.html#hero" class="nav__link">Главная</a></li>
-          <li class="nav__item"><a href="index.html#featured" class="nav__link">Сезонный кофе</a></li>
-          <li class="nav__item"><a href="index.html#philosophy" class="nav__link">Философия</a></li>
-          <li class="nav__item"><a href="index.html#ritual" class="nav__link">Ритуал</a></li>
-          <li class="nav__item"><a href="catalog.html" class="nav__link active">Каталог зерна</a></li>
-        </ul>
-      </nav>
-
-      <div class="header__actions">
-        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Переключить тему" title="Сменить тему">
-          <span class="theme-toggle__icon theme-toggle__icon--light" aria-hidden="true">☀</span>
-          <span class="theme-toggle__icon theme-toggle__icon--dark" aria-hidden="true">☾</span>
-        </button>
-
-        <button class="burger-btn" id="burger-btn" type="button" aria-label="Открыть мобильное меню" aria-expanded="false" aria-controls="main-nav">
-          <span class="burger-btn__bar"></span>
-          <span class="burger-btn__bar"></span>
-          <span class="burger-btn__bar"></span>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <main class="catalog-page">
-    <div class="container">
-      <header class="catalog-header">
-        <span class="badge">Магазин обжарщика</span>
-        <h1 class="catalog-title">Коллекция свежего зерна</h1>
-        <p class="catalog-desc">Вся линейка обжаривается дважды в неделю партиями до 15 кг на ростере Giesen.</p>
-      </header>
-
-      <div class="catalog-tabs" role="tablist" aria-label="Категории продуктов">
-        <button class="tab-btn active" role="tab" aria-selected="true" data-category="filter" type="button">
-          Фильтр &amp; Воронка
-        </button>
-        <button class="tab-btn" role="tab" aria-selected="false" data-category="espresso" type="button">
-          Эспрессо профиль
-        </button>
-        <button class="tab-btn" role="tab" aria-selected="false" data-category="drip" type="button">
-          Дрип-пакеты &amp; Аксессуары
-        </button>
-      </div>
-
-      <section class="catalog-grid" id="catalog-grid" aria-label="Список кофе"></section>
-
-      <div class="catalog-more" id="catalog-more-container">
-        <button class="btn btn--secondary btn--large" id="load-more-btn" type="button">
-          Показать ещё лоты
-        </button>
-      </div>
-    </div>
-  </main>
-
-  <div class="modal-overlay" id="modal-overlay" aria-hidden="true" role="dialog" aria-modal="true">
-    <div class="modal-window">
-      <button class="modal-close" id="modal-close" type="button" aria-label="Закрыть модальное окно">✕</button>
-      <div class="modal-body" id="modal-body"></div>
-    </div>
-  </div>
-
-  <footer class="footer">
-    <div class="container footer__container">
-      <div class="footer__col footer__brand">
-        <a href="index.html" class="logo logo--footer">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Каталог спешелти кофе — FJORD BREW</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%238c5332'%3E%3Cpath d='M2 21h18v-2H2v2zM20 8h-2V5h2v3zm0-5H4v10a4 4 0 004 4h6a4 4 0 004-4v-3h2a2 2 0 002-2V5a2 2 0 00-2-2z'/%3E%3C/svg%3E"
+      type="image/svg+xml"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__container">
+        <a href="index.html" class="logo" aria-label="Fjord Brew главная">
           <span class="logo__mark">◇</span> FJORD BREW
         </a>
-        <p class="footer__text">
-          Манифест чистого зерна. Обжариваем и доставляем свежий спешелти кофе по всей стране.
-        </p>
-        <span class="footer__copy">© 2026 Fjord Brew Roasters. Учебный проект.</span>
-      </div>
 
-      <div class="footer__col">
-        <h4 class="footer__heading">Контакты</h4>
-        <ul class="footer__links">
-          <li><a href="tel:5553535" class="footer__link"> 555-35-35</a></li>
-          <li><a href="mailto:order@fjordbrew.coffee" class="footer__link">order@fjordbrew.coffee</a></li>
-          <li>
-            <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="footer__link">
-              Петушки↗
-            </a>
-          </li>
-        </ul>
-      </div>
+        <nav class="nav" id="main-nav" aria-label="Основная навигация">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="index.html#hero" class="nav__link">Главная</a>
+            </li>
+            <li class="nav__item">
+              <a href="index.html#featured" class="nav__link">Сезонный кофе</a>
+            </li>
+            <li class="nav__item">
+              <a href="index.html#philosophy" class="nav__link">Философия</a>
+            </li>
+            <li class="nav__item">
+              <a href="index.html#ritual" class="nav__link">Ритуал</a>
+            </li>
+            <li class="nav__item">
+              <a href="catalog.html" class="nav__link active">Каталог зерна</a>
+            </li>
+          </ul>
+        </nav>
 
-      <div class="footer__col">
-        <h4 class="footer__heading">Мы в сетях</h4>
-        <ul class="footer__links">
-          <li><a href="https://t.me" target="_blank" rel="noopener noreferrer" class="footer__link">Telegram Channel ↗</a></li>
-          <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="footer__link">Instagram Showcase ↗</a></li>
-          <li><a href="https://github.com" target="_blank" rel="noopener noreferrer" class="footer__link">GitHub Репозиторий ↗</a></li>
-        </ul>
-      </div>
+        <div class="header__actions">
+          <button
+            class="theme-toggle"
+            id="theme-toggle"
+            type="button"
+            aria-label="Переключить тему"
+            title="Сменить тему"
+          >
+            <span
+              class="theme-toggle__icon theme-toggle__icon--light"
+              aria-hidden="true"
+              >☀</span
+            >
+            <span
+              class="theme-toggle__icon theme-toggle__icon--dark"
+              aria-hidden="true"
+              >☾</span
+            >
+          </button>
 
-      <div class="footer__col footer__rss">
-        <h4 class="footer__heading">RS School</h4>
-        <p class="footer__text">Курс JavaScript / Front-end Stage 1</p>
-        <a href="https://rs.school/courses/javascript-ru" target="_blank" rel="noopener noreferrer" class="rss-badge" aria-label="RS School JS Course">
-          <span class="rss-badge__tag">RS School</span> Course 2026
-        </a>
+          <button
+            class="burger-btn"
+            id="burger-btn"
+            type="button"
+            aria-label="Открыть мобильное меню"
+            aria-expanded="false"
+            aria-controls="main-nav"
+          >
+            <span class="burger-btn__bar"></span>
+            <span class="burger-btn__bar"></span>
+            <span class="burger-btn__bar"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="catalog-page">
+      <div class="container">
+        <header class="catalog-header">
+          <span class="badge">Магазин обжарщика</span>
+          <h1 class="catalog-title">Коллекция свежего зерна</h1>
+          <p class="catalog-desc">
+            Вся линейка обжаривается дважды в неделю партиями до 15 кг на
+            ростере Giesen.
+          </p>
+        </header>
+
+        <div class="catalog-tabs" aria-label="Категории продуктов">
+          <button class="tab-btn active" data-category="filter" type="button">
+            Фильтр &amp; Воронка
+          </button>
+          <button class="tab-btn" data-category="espresso" type="button">
+            Эспрессо профиль
+          </button>
+          <button class="tab-btn" data-category="drip" type="button">
+            Дрип-пакеты &amp; Аксессуары
+          </button>
+        </div>
+
+        <section
+          class="catalog-grid"
+          id="catalog-grid"
+          aria-label="Список кофе"
+        ></section>
+
+        <div class="catalog-more" id="catalog-more-container">
+          <button
+            class="btn btn--secondary btn--large"
+            id="load-more-btn"
+            type="button"
+          >
+            Показать ещё лоты
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <div
+      class="modal-overlay"
+      id="modal-overlay"
+      aria-hidden="true"
+      role="dialog"
+      aria-modal="true"
+    >
+      <div class="modal-window">
+        <button
+          class="modal-close"
+          id="modal-close"
+          type="button"
+          aria-label="Закрыть модальное окно"
+        >
+          ✕
+        </button>
+        <div class="modal-body" id="modal-body"></div>
       </div>
     </div>
-  </footer>
 
-  <script src="js/products.js"></script>
-  <script src="js/script.js"></script>
-</body>
+    <footer class="footer">
+      <div class="container footer__container">
+        <div class="footer__col footer__brand">
+          <a href="index.html" class="logo logo--footer">
+            <span class="logo__mark">◇</span> FJORD BREW
+          </a>
+          <p class="footer__text">
+            Манифест чистого зерна. Обжариваем и доставляем свежий спешелти кофе
+            по всей стране.
+          </p>
+          <span class="footer__copy"
+            >© 2026 Fjord Brew Roasters. Учебный проект.</span
+          >
+        </div>
+
+        <div class="footer__col">
+          <h2 class="footer__heading">Контакты</h2>
+          <ul class="footer__links">
+            <li><a href="tel:5553535" class="footer__link"> 555-35-35</a></li>
+            <li>
+              <a href="mailto:order@fjordbrew.coffee" class="footer__link"
+                >order@fjordbrew.coffee</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://maps.google.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="footer__link"
+              >
+                Петушки↗
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h2 class="footer__heading">Мы в сетях</h2>
+          <ul class="footer__links">
+            <li>
+              <a
+                href="https://t.me"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="footer__link"
+                >Telegram Channel ↗</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="footer__link"
+                >Instagram Showcase ↗</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="footer__link"
+                >GitHub Репозиторий ↗</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer__col footer__rss">
+          <h2 class="footer__heading">RS School</h2>
+          <p class="footer__text">Курс JavaScript / Front-end Stage 1</p>
+          <a
+            href="https://rs.school/courses/javascript-ru"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="rss-badge"
+            aria-label="RS School JS Course"
+          >
+            <span class="rss-badge__tag">RS School</span> Course 2026
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/products.js"></script>
+    <script src="js/script.js"></script>
+  </body>
 </html>
